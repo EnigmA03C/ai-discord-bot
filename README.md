@@ -5,7 +5,7 @@ skills in python to the test. Still very much work in progress, i do not have a 
 for public use.
 
 # Roadmap
-- [] **AI**
+- [ ] **AI**
   - [x] **Llama3-8B implementation**
     - [x] Implement speech recognition with STT
     - [x] Implement TTS
