@@ -1,7 +1,0 @@
-discord.py[voice]
-openai-whisper
-PyAudio
-SpeechRecognition
-numpy
-discord-ext-voice-recv
-transformers
