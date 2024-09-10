@@ -47,14 +47,11 @@ class Voice(commands.Cog):
                                     answer = ai_voice.ai_vc(text)
                                 
                                     tts.tts_to_file(text=answer,
-                                    file_path="data\\voice\\AI_Output.wav",
-                                    speaker_wav=["data\\AI_Voice.wav"],
-                                    language="en", split_sentences=True)
+                                    file_path="src/data/voice/AI_Output.wav",
+                                    speaker_wav=["src/data/voice/AI_Voice.wav"],
+                                    language="en")
                                 
-                                    try:
-                                        ctx.voice_client.play(discord.FFmpegPCMAudio("data\\voice\\AI_Output.wav"))
-                                    except Exception as e:
-                                        print(e)
+                                    ctx.voice_client.play(discord.FFmpegPCMAudio("data/voice/AI_Output.wav"))
                                 else:
                                     return
                             else:

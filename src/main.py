@@ -4,7 +4,7 @@ from discord.ext import commands
 import json
 import logging
 
-with open('config/data.json', 'r') as file:
+with open('src/config/data.json', 'r') as file:
     config = json.load(file)
 
 token = config['token']
@@ -36,7 +36,7 @@ async def load_cogs():
 async def main():
     async with bot:
         #handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
-        logging.basicConfig(level=logging.DEBUG, filename='data/discord.log', filemode='w')
+        logging.basicConfig(level=logging.DEBUG, filename='src/data/discord.log', filemode='w')
         await load_cogs()
         await bot.start(token=token)
 
