@@ -1,4 +1,4 @@
 {
-    "token": "NzYzNzkzMjExODY0NTE0NjIx.GiaTQ1.1jKQAT-JsxRhmUn8ShqjdwoBecuBs2hCPVqLmY",
-    "model_path": "src/config/Meta-Llama-3.1-8B"
+    "token": "YOUR_DISCORD_TOKEN",
+    "model_path": "MODEL_PATH_OR_URL"
 }

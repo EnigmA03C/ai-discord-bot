@@ -41,7 +41,6 @@ class AI(commands.Cog):
             user_message = str(ctx.content)
             input_text = f"{system_message}\n{user_message}<|end_of_text|>"
 
-            # Tokenize input text
             inputs = self.tokenizer(text=input_text, padding=True, return_tensors="pt")
             inputs = {key: value.to(self.device) for key, value in inputs.items()}
 
@@ -52,19 +51,16 @@ class AI(commands.Cog):
                     temperature=0.2,
                     top_k=40,
                     top_p=0.95,
-                    eos_token_id=self.tokenizer.eos_token_id,  # Ensure EOS token is used
+                    eos_token_id=self.tokenizer.eos_token_id,
                     do_sample=True,
                 )
 
-            # Decode the output from the model
             answer = self.tokenizer.batch_decode(
                 outputs, skip_special_tokens=True, clean_up_tokenization_spaces=False
             )[0]
 
-            # Remove the input part from the generated output
             format_answer = answer[len(input_text) :].strip()
 
-            # Send the formatted response
             await ctx.channel.send(format_answer)
         else:
             return
