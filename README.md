@@ -9,7 +9,7 @@ for public use.
   - [x] **Llama3-8B implementation**
     - [x] Implement speech recognition with STT
     - [x] Implement TTS
-  - [] **Memory**
+  - [ ] **Memory**
   - [ ] **Fine Tuning** 
 
 # About the language model
