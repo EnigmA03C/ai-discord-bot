@@ -1,7 +1,0 @@
-discord.py[voice]
-openai-whisper
-PyAudio
-SpeechRecognition
-numpy==1.26.4
-llama-cpp-python
-discord-ext-voice-recv

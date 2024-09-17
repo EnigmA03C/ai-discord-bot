@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "luna"
+version = "0.1.0"
+description = ""
+authors = ["EnigmA03C <sdangelo989@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.11"
+torch = {version = "^2.4.1+cu124", source = "pytorch-gpu"}
+torchvision = {version = "^0.19.1+cu124", source = "pytorch-gpu"}
+torchaudio = {version = "^2.4.1+cu124", source = "pytorch-gpu"}
+transformers = "^4.44.2"
+tts = "^0.22.0"
+bitsandbytes = "^0.43.3"
+accelerate = {git = "https://github.com/huggingface/accelerate"}
+openai-whisper = {git = "https://github.com/openai/whisper"}
+discord-py = {extras = ["voice"], version = "^2.4.0"}
+discord-ext-voice-recv = "^0.4.2a145"
+speechrecognition = "^3.10.4"
+ruff = "^0.6.4"
+
+
+[[tool.poetry.source]]
+name = "pytorch-gpu"
+url = "https://download.pytorch.org/whl/cu124"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
