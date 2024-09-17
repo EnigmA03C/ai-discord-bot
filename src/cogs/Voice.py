@@ -1,9 +1,8 @@
 import discord
 from discord.ext import commands
-from discord.ext.voice_recv import VoiceRecvClient, AudioSink, VoiceData
+from discord.ext.voice_recv import VoiceRecvClient
 from discord.ext.voice_recv.extras import SpeechRecognitionSink
 import speech_recognition as sr
-import numpy as np
 import whisper
 import torch
 from TTS.api import TTS
@@ -21,15 +20,7 @@ class Voice(commands.Cog):
         print("module Voice has been loaded. . .")
 
     @commands.command()
-    async def join(self, ctx) -> None:
-        """command for the bot to join the vc
-
-        Args:
-            ctx (context): command context
-
-        Returns:
-            None
-        """
+    async def join(self, ctx: commands.Context) -> None:
         channel = ctx.author.voice.channel
         ai_voice = self.bot.get_cog("AI")
         tts = TTS("tts_models/multilingual/multi-dataset/xtts_v2").to(device=0)
@@ -69,7 +60,7 @@ class Voice(commands.Cog):
 
                                     ctx.voice_client.play(
                                         discord.FFmpegPCMAudio(
-                                            "data/voice/AI_Output.wav"
+                                            "src/data/voice/AI_Output.wav"
                                         )
                                     )
                                 else:
