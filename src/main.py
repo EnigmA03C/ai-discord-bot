@@ -29,7 +29,7 @@ async def on_ready():
 
 
 async def load_cogs():
-    """loads the modules of the bot"""
+    # Loading Bot modules
     for filename in os.listdir("src/cogs"):
         if filename.endswith(".py") and filename != "__init__.py":
             await bot.load_extension(f"cogs.{filename[:-3]}")
@@ -37,7 +37,6 @@ async def load_cogs():
 
 async def main():
     async with bot:
-        # handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
         logging.basicConfig(
             level=logging.DEBUG, filename="src/data/discord.log", filemode="w"
         )
