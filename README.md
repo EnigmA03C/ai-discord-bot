@@ -9,9 +9,7 @@ for public use.
   - [x] **Llama3-8B implementation**
     - [x] Implement speech recognition with STT
     - [x] Implement TTS
-  - [x] **Memory**
-    - [x] Give The AI short term memory to remember previous prompts
-    - [x] Work on long term memory
+  - [] **Memory**
   - [ ] **Fine Tuning** 
 
 # About the language model
